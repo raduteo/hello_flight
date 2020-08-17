@@ -2,7 +2,8 @@ cmake_minimum_required(VERSION 3.16)
 project(helloflight)
 set(CMAKE_CXX_STANDARD 14)
 
-#collect all local cmake variables to the external project
+message("Build type " ${CMAKE_BUILD_TYPE})
+
 get_cmake_property(vars CACHE_VARIABLES)
 foreach (var ${vars})
     get_property(currentHelpString CACHE "${var}" PROPERTY HELPSTRING)
